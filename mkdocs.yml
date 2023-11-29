@@ -1,0 +1,53 @@
+site_name: mkdocs-playbook-template
+site_url: https://rise8-us.github.io/mkdocs-playbook-template/
+repo_url: https://github.com/rise8-us/mkdocs-playbook-template
+edit_uri: edit/main/docs/
+repo_name: mkdocs-playbook-template
+theme:
+  name: material
+  custom_dir: docs/overrides
+  logo: images/logo.png
+  favicon: images/logo.png
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - navigation.tabs
+    - navigation.footer
+    - navigation.expand
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/rise8-us/mkdocs-playbook-template
+extra_css: [extra.css]
+markdown_extensions:
+  - abbr
+  - footnotes
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.details
+  - admonition
+plugins:
+  - search
+  - git-revision-date-localized:
+      type: iso_datetime
+  - with-pdf:
+      output_path: assets/mkdocs-playbook-template.pdf
+      author: Rise8
+      copyright: © 2023
+      cover_subtitle: ""
+      toc_title: Table of Contents
+      toc_level: 1
+      ordered_chapter_level: 0
+      two_columns_level: 0
+  - print-site:
+      path_to_pdf: assets/mkdocs-playbook-template.pdf
